@@ -18,9 +18,21 @@ class Display{
 class Calculate{
 	Scanner cin;
 	Display output;
-	Calculate() throws IOException{cin=new Scanner(System.in);output=new Display();if(cin==null)throw new IOException("dummy");}
-	int getINTVal(){int x=cin.nextInt();if(x<=0)throw new NumberFormatException("All the values must be positive");return x;}
-	double getDoubleVal(){double x=cin.nextDouble();if(x<=0)throw new NumberFormatException("All the values must be positive");return x;}
+	Calculate() throws IOException{
+		cin=new Scanner(System.in);
+		output=new Display();
+		if(cin==null)throw new IOException("dummy");
+	}
+	int getINTVal(){
+		int x=cin.nextInt();
+		if(x<=0)throw new NumberFormatException("All the values must be positive");
+		return x;
+	}
+	double getDoubleVal(){
+		double x=cin.nextDouble();
+		if(x<=0)throw new NumberFormatException("All the values must be positive");
+		return x;
+	}
 	static Volume get_Vol(){return new Volume();}
 }
 
